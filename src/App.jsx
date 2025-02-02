@@ -1,10 +1,8 @@
-import { useState } from 'react'
-import Header from "./components/Header"; 
-import SearchInput from "./components/SearchInput"; 
-import WeatherCard from "./components/WeatherCard"; 
-import ToggleSwitch from "./components/ToggleSwitch";
-
-import './App.css'
+import React, { useState } from "react";
+import Header from "./components/Header.jsx";
+import ToggleSwitch from "./components/ToggleSwitch.jsx";
+import SearchInput from "./components/SearchInput.jsx";
+import WeatherCard from "./components/WeatherCard.jsx";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -13,23 +11,12 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <ToggleSwitch selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
       <SearchInput setWeatherData={setWeatherData} />
       {weatherData && <WeatherCard weatherData={weatherData} />}
-      <ToggleSwitch selectedDay={selectedDay} setSelectedDay={setSelectedDay} />
     </div>
   );
 }
 
+export default App;
 
-
-  return (
-    <>
-      <div>
-  
-      </div>
-   
-    </>
-  )
-
-
-export default App
