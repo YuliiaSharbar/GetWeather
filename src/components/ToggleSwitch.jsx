@@ -1,18 +1,23 @@
 import React from "react";
 
-function ToggleSwitch({ selectedDay, setSelectedDay }) {
-  return (
-    <div>
-      <label>
-        <input
-          type="checkbox"
-          checked={selectedDay === "tomorrow"}
-          onChange={() => setSelectedDay(selectedDay === "today" ? "tomorrow" : "today")}
-        />
-        
-      </label>
-    </div>
-  );
+function ToggleSwitch({ isTomorrow, setIsTomorrow }) {
+    const handleToggle = () => {
+        console.log("Тогл перемкнуто:", !isTomorrow ? "Завтра" : "Сьогодні");
+        setIsTomorrow(!isTomorrow);
+    };
+
+    return (
+        <div className="toggle-switch">
+            <label>Today</label>
+            <input
+                type="checkbox"
+                id="toggle-weather"
+                checked={isTomorrow}
+                onChange={handleToggle}
+            />
+            <label>Tomorrow</label>
+        </div>
+    );
 }
 
 export default ToggleSwitch;
