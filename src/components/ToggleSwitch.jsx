@@ -8,14 +8,13 @@ function ToggleSwitch({ isTomorrow, setIsTomorrow }) {
 
     return (
         <div className="toggle-switch">
-            <label>Today</label>
+            <span>Today</span>
             <input
                 type="checkbox"
-                id="toggle-weather"
                 checked={isTomorrow}
                 onChange={handleToggle}
             />
-            <label>Tomorrow</label>
+            <span>Tomorrow</span>
         </div>
     );
 }

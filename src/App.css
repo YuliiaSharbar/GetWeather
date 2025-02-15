@@ -69,35 +69,12 @@ button:hover {
   width: 350px;
 }
 
-.weather-card h2 {
-  margin: 0;
-  color: #007bff;
-  font-size: 28px;
-}
-
-.weather-icon {
-  width: 80px;
-  height: 80px;
-}
-
-.toggle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .toggle-switch {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-}
-
-.toggle-switch label {
-  font-size: 18px;
-  color: #28a745;
-  font-weight: bold;
+  margin-top: 20px;
 }
 
 .toggle-switch input[type="checkbox"] {
@@ -108,7 +85,6 @@ button:hover {
   border-radius: 15px;
   position: relative;
   cursor: pointer;
-  outline: none;
   transition: 0.3s;
 }
 
@@ -116,7 +92,7 @@ button:hover {
   background: #28a745;
 }
 
-.toggle-switch input[type="checkbox"]:before {
+.toggle-switch input[type="checkbox"]::before {
   content: "";
   position: absolute;
   width: 22px;
@@ -129,6 +105,8 @@ button:hover {
   transition: 0.3s;
 }
 
-.toggle-switch input[type="checkbox"]:checked:before {
+.toggle-switch input[type="checkbox"]:checked::before {
   left: 25px;
 }
+
+
