@@ -1,5 +1,5 @@
 import React from "react";
-import { WbSunny } from "@mui/icons-material";
+import { WbSunny } from "@mui/icons-material"; // Підключаємо іконку "сонця" з бібліотеки MUI
 
 function Header() {
     return (

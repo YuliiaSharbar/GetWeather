@@ -3,9 +3,10 @@ import React, { useState } from "react";
 function SearchInput({ setCity, fetchWeather }) {
     const [inputCity, setInputCity] = useState("");
 
+     // Функція, яка викликається при натисканні кнопки "Пошук"
     const handleSearch = () => {
-        if (!inputCity) return;
-        setCity(inputCity);
+        if (!inputCity) return; // Якщо нічого не введено, зупиняємось
+        setCity(inputCity); // Оновлюємо стан міста
         fetchWeather(inputCity, false); // Спочатку шукаємо погоду на сьогодні
     };
 
